@@ -21,7 +21,7 @@ namespace L.Pos.DataAccess.Map
 
             this.References(x => x.CustomerType, "CustomerTypeId").Nullable().Cascade.None();
 
-            this.HasMany(x => x.Addresses).Inverse().Cascade.All();
+            this.HasMany(x => x.Addresses).KeyColumns.Add("CustomerId", "CompanyId").Inverse().Cascade.All();
 
             this.Map(x => x.CreateBy);
             this.Map(x => x.CreateDate).Nullable();

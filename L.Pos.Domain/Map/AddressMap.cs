@@ -13,8 +13,10 @@ namespace L.Pos.DataAccess.Map
         public AddressMap()
         {
             this.CompositeId()
-                .KeyProperty(x => x.Id, "AddressId")
-                .KeyReference(x => x.Customer, "Id", "CompanyId");
+                .KeyProperty(x => x.Id, "Id")
+                .KeyReference(x => x.Customer, "CustomerId", "CompanyId");
+
+            //this.References(x => x.Customer).Columns("CustomerId", "CompanyId");
 
             this.Map(x => x.Person);
             this.Map(x => x.AddressLine);

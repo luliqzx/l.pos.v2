@@ -117,10 +117,14 @@ namespace L.Pos.Cons.Controller
                 cust.Description = "Umum 1";
                 cust.Shortname = "Umum 1";
 
-                using (ITransaction trx = sess.BeginTransaction())
+                Customer custVerify = sess.Query<Customer>().FirstOrDefault(x => x.Id == "CustUmum1");
+                if (custVerify == null)
                 {
-                    sess.Save(cust);
-                    trx.Commit();
+                    using (ITransaction trx = sess.BeginTransaction())
+                    {
+                        sess.Save(cust);
+                        trx.Commit();
+                    }    
                 }
             }
 
@@ -141,7 +145,7 @@ namespace L.Pos.Cons.Controller
 
                     cust.Addresses.Add(new Address { Id = "Rumah", Customer = cust, Person = "Lucky", AddressLine = "Bekasi", CreateDate = DateTime.Now, UpdateDate = DateTime.Now });
 
-                    sess.Update(cust);
+                    sess.SaveOrUpdate(cust);
                     trx.Commit();
                 }
             }
