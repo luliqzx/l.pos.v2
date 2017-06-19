@@ -25,6 +25,9 @@ namespace L.Pos.Cons
             MasterController.collectcustomertype();
             MasterController.collectcompany();
             MasterController.buildcustomer();
+            MasterController.collectsupplier();
+            MasterController.collectuom();
+            MasterController.collectproduct();
 
             //ActorController = container.GetInstance<IActorController>();
             //ActorController.Delete();

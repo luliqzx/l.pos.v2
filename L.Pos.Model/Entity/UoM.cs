@@ -10,16 +10,5 @@ namespace L.Pos.Model.Entity
     {
         public virtual string Description { get; set; }
         public virtual bool Active { get; set; }
-
-        public virtual IList<UoMConversion> UoMConversion { get; set; }
-
-        public virtual void AddConversion(UoMConversion _UoMConversion)
-        {
-            if (UoMConversion == null)
-            {
-                UoMConversion = new List<UoMConversion>();
-            }
-            UoMConversion.Add(_UoMConversion);
-        }
     }
 }

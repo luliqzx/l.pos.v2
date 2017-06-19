@@ -52,7 +52,6 @@
     <Compile Include="Entity\ProductType.cs" />
     <Compile Include="Entity\Supplier.cs" />
     <Compile Include="Entity\UoM.cs" />
-    <Compile Include="Entity\UoMConversion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

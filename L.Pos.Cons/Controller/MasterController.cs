@@ -17,6 +17,9 @@ namespace L.Pos.Cons.Controller
         void collectcustomertype();
         void collectcompany();
         void buildcustomer();
+        void collectsupplier();
+        void collectuom();
+        void collectproduct();
     }
     public class MasterController : IMasterController
     {
@@ -150,6 +153,99 @@ namespace L.Pos.Cons.Controller
                     }
 
                     sess.Update(cust);
+                    trx.Commit();
+                }
+            }
+        }
+
+        public void collectsupplier()
+        {
+            using (ISession sess = this.UnitOfWork.CreateSession())
+            {
+                Supplier supp1 = sess.Query<Supplier>().FirstOrDefault(x => x.Id == "Amigos");
+                if (supp1 == null)
+                {
+                    supp1 = new Supplier();
+                    supp1.Id = "Amigos";
+                    supp1.Description = "Amigos";
+                    supp1.Company = this.UnitOfWork.Session.Query<Company>().FirstOrDefault(x => x.Id == "0001");
+                    using (ITransaction trx = sess.BeginTransaction())
+                    {
+                        sess.Save(supp1);
+                        trx.Commit();
+                    }
+                }
+            }
+            using (ISession sess = this.UnitOfWork.CreateSession())
+            {
+                Supplier supp2 = sess.Query<Supplier>().FirstOrDefault(x => x.Id == "Summo");
+                if (supp2 == null)
+                {
+                    supp2 = new Supplier();
+                    supp2.Id = "Summo";
+                    supp2.Description = "Summo";
+                    supp2.Company = this.UnitOfWork.Session.Query<Company>().FirstOrDefault(x => x.Id == "0001");
+                    using (ITransaction trx = sess.BeginTransaction())
+                    {
+                        sess.Save(supp2);
+                        trx.Commit();
+                    }
+                }
+            }
+        }
+
+        public void collectuom()
+        {
+            using (ISession sess = this.UnitOfWork.CreateSession())
+            {
+                using (ITransaction trx = sess.BeginTransaction())
+                {
+                    UoM UoM1 = sess.Query<UoM>().FirstOrDefault(x => x.Id == "PCS");
+                    if (UoM1 == null)
+                    {
+                        UoM1 = new UoM();
+                        UoM1.Id = "PCS";
+                        UoM1.Description = "PCS";
+                        UoM1.Active = true;
+                        sess.Save(UoM1);
+                    }
+
+                    UoM UoM2 = sess.Query<UoM>().FirstOrDefault(x => x.Id == "PACK");
+                    if (UoM2 == null)
+                    {
+                        UoM2 = new UoM();
+                        UoM2.Id = "PACK";
+                        UoM2.Description = "PACK";
+                        UoM2.Active = true;
+                        sess.Save(UoM2);
+                    }
+                    trx.Commit();
+                }
+            }
+        }
+
+        public void collectproduct()
+        {
+            using (ISession sess = this.UnitOfWork.CreateSession())
+            {
+                using (ITransaction trx = sess.BeginTransaction())
+                {
+                    Product Product1 = sess.Query<Product>().FirstOrDefault(x => x.Id == "TESPROD01");
+                    if (Product1 == null)
+                    {
+                        Product1 = new Product();
+                        Product1.Id = "TESPROD01";
+                        Product1.Description = "TESPROD01";
+                        Product1.BaseUnit = sess.Load<UoM>("PCS");
+                        Product1.SalesUnit = sess.Load<UoM>("PCS");
+                        Product1.Shortname = "TESPROD01";
+                        Product1.CreateDate = DateTime.Now;
+                        Product1.UpdateDate = DateTime.Now;
+                        Product1.Company = sess.Load<Company>("0001");
+                        Product1.Supplier = sess.Load<Supplier>(new { SupplierId = "Summo", CompanyId = "0001" });
+                        //Product1.Supplier = sess.Query<Supplier>().FirstOrDefault(x => x.Id == "0001" && (x.Company != null && x.Company.Id == "0001"));
+                        sess.Save(Product1);
+                    }
                     trx.Commit();
                 }
             }
