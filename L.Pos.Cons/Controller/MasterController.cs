@@ -124,7 +124,7 @@ namespace L.Pos.Cons.Controller
                     {
                         sess.Save(cust);
                         trx.Commit();
-                    }    
+                    }
                 }
             }
 
@@ -143,9 +143,13 @@ namespace L.Pos.Cons.Controller
                     }
                     cust.Addresses.Clear();
 
-                    cust.Addresses.Add(new Address { Id = "Rumah", Customer = cust, Person = "Lucky", AddressLine = "Bekasi", CreateDate = DateTime.Now, UpdateDate = DateTime.Now });
+                    Address addr = sess.Query<Address>().FirstOrDefault(x => x.Id == "Rumah" && x.Customer == cust);
+                    if (addr == null)
+                    {
+                        cust.Addresses.Add(new Address { Id = "Rumah", Customer = cust, Person = "Lucky", AddressLine = "Bekasi", CreateDate = DateTime.Now, UpdateDate = DateTime.Now });
+                    }
 
-                    sess.SaveOrUpdate(cust);
+                    sess.Update(cust);
                     trx.Commit();
                 }
             }
