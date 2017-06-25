@@ -9,6 +9,14 @@ namespace L.Pos.Model.Entity
     public class Supplier : BaseEntity<string>
     {
         public virtual string Description { get; set; }
+        public virtual string Address { get; set; }
+        public virtual string City   { get; set; }
+        public virtual string Region { get; set; }
+        public virtual string PostalCode { get; set; }
+        public virtual string Country { get; set; }
+        public virtual string Phone { get; set; }
+        public virtual string Fax { get; set; }
+        public virtual string HomePage { get; set; }
         public virtual Company Company { get; set; }
 
         public override bool Equals(object obj)

@@ -18,6 +18,8 @@ namespace L.Pos.Model.Entity
 
         public virtual UoM SalesUnit { get; set; }
 
+        public virtual decimal PriceUnit { get; set; }
+
 
         public override bool Equals(object obj)
         {

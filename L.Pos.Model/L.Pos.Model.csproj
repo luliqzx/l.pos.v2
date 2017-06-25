@@ -48,8 +48,13 @@
     <Compile Include="Entity\CustomerType.cs" />
     <Compile Include="Entity\Employee.cs" />
     <Compile Include="Entity\IAuditable.cs" />
+    <Compile Include="Entity\Plant.cs" />
     <Compile Include="Entity\Product.cs" />
     <Compile Include="Entity\ProductType.cs" />
+    <Compile Include="Entity\Shipper.cs" />
+    <Compile Include="Entity\StorageBin.cs" />
+    <Compile Include="Entity\StorageLocation.cs" />
+    <Compile Include="Entity\StorageType.cs" />
     <Compile Include="Entity\Supplier.cs" />
     <Compile Include="Entity\UoM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
