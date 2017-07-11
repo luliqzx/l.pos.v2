@@ -21,6 +21,7 @@ namespace L.Pos.Cons.Controller
         void collectuom();
         void collectproduct();
     }
+
     public class MasterController : IMasterController
     {
         private IUnitOfWork UnitOfWork { get; set; }
@@ -242,7 +243,7 @@ namespace L.Pos.Cons.Controller
                         Product1.CreateDate = DateTime.Now;
                         Product1.UpdateDate = DateTime.Now;
                         Product1.Company = sess.Load<Company>("0001");
-                        Product1.Supplier = sess.Load<Supplier>(new { SupplierId = "Summo", CompanyId = "0001" });
+                        Product1.Supplier = sess.Load<Supplier>(new Supplier { Id = "Summo", Company = Product1.Company });
                         //Product1.Supplier = sess.Query<Supplier>().FirstOrDefault(x => x.Id == "0001" && (x.Company != null && x.Company.Id == "0001"));
                         sess.Save(Product1);
                     }

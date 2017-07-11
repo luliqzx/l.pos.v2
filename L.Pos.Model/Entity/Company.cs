@@ -9,5 +9,6 @@ namespace L.Pos.Model.Entity
     public class Company : BaseEntity<string>
     {
         public virtual string Description { get; set; }
+        public virtual Company RootCompany { get; set; }
     }
 }
