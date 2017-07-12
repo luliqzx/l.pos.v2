@@ -33,18 +33,20 @@ namespace L.Pos.Cons.Controller
 
         public void collectproducttype()
         {
+            Client client = UnitOfWork.CreateSession().Load<Client>("0001");
+
             IList<ProductType> lstPT = new List<ProductType>();
-            lstPT.Add(new ProductType { Id = "Makanan", Description = "Makanan" });
-            lstPT.Add(new ProductType { Id = "Minuman", Description = "Minuman" });
-            lstPT.Add(new ProductType { Id = "Pakaian", Description = "Pakaian" });
-            lstPT.Add(new ProductType { Id = "Sepatu", Description = "Sepatu" });
-            lstPT.Add(new ProductType { Id = "Tas", Description = "Tas" });
+            lstPT.Add(new ProductType { Id = "Makanan", Description = "Makanan", Client = client });
+            lstPT.Add(new ProductType { Id = "Minuman", Description = "Minuman", Client = client });
+            lstPT.Add(new ProductType { Id = "Pakaian", Description = "Pakaian", Client = client });
+            lstPT.Add(new ProductType { Id = "Sepatu", Description = "Sepatu", Client = client });
+            lstPT.Add(new ProductType { Id = "Tas", Description = "Tas", Client = client });
 
             using (ITransaction trx = this.UnitOfWork.Session.BeginTransaction())
             {
                 for (int i = 0; i < lstPT.Count; i++)
                 {
-                    ProductType pt = this.UnitOfWork.Session.Query<ProductType>().FirstOrDefault(x => x.Id == lstPT[i].Id);
+                    ProductType pt = this.UnitOfWork.Session.Query<ProductType>().FirstOrDefault(x => x.Id == lstPT[i].Id && x.Client == client);
                     if (pt == null)
                     {
                         this.UnitOfWork.Session.Save(lstPT[i]);

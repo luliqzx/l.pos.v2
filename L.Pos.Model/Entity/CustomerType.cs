@@ -10,5 +10,26 @@ namespace L.Pos.Model.Entity
     {
         public virtual string Description { get; set; }
         public virtual Client Client { get; set; }
+
+
+        public override bool Equals(object obj)
+        {
+            if (obj != null)
+            {
+                CustomerType ent = obj as CustomerType;
+                if (ent.Client == this.Client && ent.Id == this.Id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            int i = 0;
+            i = (this.Id).GetHashCode() + (this.Client).GetHashCode();
+            return i;
+        }
     }
 }

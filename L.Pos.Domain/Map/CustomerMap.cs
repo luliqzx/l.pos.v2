@@ -19,7 +19,7 @@ namespace L.Pos.DataAccess.Map
             this.Map(x => x.Description);
             this.Map(x => x.Shortname);
 
-            this.References(x => x.CustomerType, "CustomerTypeId").Nullable().Cascade.None();
+            this.References(x => x.CustomerType).Columns("CustomerTypeId", "ClientId").Nullable().Cascade.None();
 
             this.HasMany(x => x.Addresses).KeyColumns.Add("CustomerId", "ClientId").Inverse().Cascade.AllDeleteOrphan();
 
