@@ -12,7 +12,7 @@ namespace L.Pos.DataAccess.Map
     {
         public CustomerTypeMap()
         {
-            this.CompositeId().KeyProperty(x => x.Id).KeyReference(x => x.Client, "ClientId");
+            this.CompositeId().KeyProperty(x => x.Id).KeyReference(x => x.Client, "Client");
             this.Map(x => x.Description);
         }
     }

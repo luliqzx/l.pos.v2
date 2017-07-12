@@ -14,7 +14,7 @@ namespace L.Pos.DataAccess.Map
       {
           this.CompositeId()
               .KeyProperty(x => x.Id)
-              .KeyReference(x => x.Client, "ClientId");
+              .KeyReference(x => x.Client, "Client");
           this.Map(x => x.Description);
       }
     }

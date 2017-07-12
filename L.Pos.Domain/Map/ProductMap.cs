@@ -14,14 +14,14 @@ namespace L.Pos.DataAccess.Map
         {
             this.CompositeId()
                 .KeyProperty(x => x.Id)
-                .KeyReference(x => x.Client, "ClientId");
+                .KeyReference(x => x.Client, "Client");
             this.Map(x => x.Description);
             this.Map(x => x.Shortname);
 
-            this.References(x => x.Supplier).Columns("SupplierId", "ClientId");//.Cascade.None();
-            this.References(x => x.ProductType).Columns("ProductTypeId", "ClientId");//.Cascade.None();
-            this.References(x => x.BaseUnit, "BaseUnitId");//.Cascade.None();
-            this.References(x => x.SalesUnit, "SalesUnitId");//.Cascade.None();
+            this.References(x => x.Supplier).Columns("SupplierId", "SuppClient");//.Cascade.None();
+            this.References(x => x.ProductType).Columns("ProductTypeId", "PTClient");//.Cascade.None();
+            this.References(x => x.BaseUnit, "BaseUnit");//.Cascade.None();
+            this.References(x => x.SalesUnit, "SalesUnit");//.Cascade.None();
         }
     }
 }

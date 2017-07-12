@@ -15,7 +15,7 @@ namespace L.Pos.Cons.Controller
     {
         void collectproducttype();
         void collectcustomertype();
-        void collectcompany();
+        void collectclient();
         void buildcustomer();
         void collectsupplier();
         void collectuom();
@@ -59,9 +59,11 @@ namespace L.Pos.Cons.Controller
 
         public void collectcustomertype()
         {
+            Client client = this.UnitOfWork.CreateSession().Load<Client>("0001");
+
             IList<CustomerType> lstCT = new List<CustomerType>();
-            lstCT.Add(new CustomerType { Id = "Umum", Description = "Umum" });
-            lstCT.Add(new CustomerType { Id = "Toko", Description = "Toko" });
+            lstCT.Add(new CustomerType { Id = "Umum", Description = "Umum", Client = client });
+            lstCT.Add(new CustomerType { Id = "Toko", Description = "Toko", Client = client });
 
             using (ITransaction trx = this.UnitOfWork.Session.BeginTransaction())
             {
@@ -78,7 +80,7 @@ namespace L.Pos.Cons.Controller
 
         }
 
-        public void collectcompany()
+        public void collectclient()
         {
             Client cp = this.UnitOfWork.Session.Query<Client>().FirstOrDefault(x => x.Id == "0001");
             if (cp == null)

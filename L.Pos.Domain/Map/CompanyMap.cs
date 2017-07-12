@@ -15,7 +15,7 @@ namespace L.Pos.DataAccess.Map
             this.Id(x => x.Id).GeneratedBy.Assigned();
             this.Map(x => x.Description);
 
-            this.References(x => x.RootClient, "RootCompany").Nullable();
+            this.References(x => x.RootClient, "RootClient").Nullable();
 
             this.Map(x => x.CreateBy);
             this.Map(x => x.CreateDate).Nullable();
