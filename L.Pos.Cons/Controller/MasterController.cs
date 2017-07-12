@@ -78,10 +78,10 @@ namespace L.Pos.Cons.Controller
 
         public void collectcompany()
         {
-            Company cp = this.UnitOfWork.Session.Query<Company>().FirstOrDefault(x => x.Id == "0001");
+            Client cp = this.UnitOfWork.Session.Query<Client>().FirstOrDefault(x => x.Id == "0001");
             if (cp == null)
             {
-                cp = new Company { Id = "0001", Description = "My Shop", CreateDate = DateTime.Now, UpdateDate = DateTime.Now };
+                cp = new Client { Id = "0001", Description = "My Shop", CreateDate = DateTime.Now, UpdateDate = DateTime.Now };
                 using (ISession sess = this.UnitOfWork.Session)
                 {
                     using (ITransaction trx = sess.BeginTransaction())
@@ -110,11 +110,11 @@ namespace L.Pos.Cons.Controller
             using (ISession sess = this.UnitOfWork.CreateSession())
             {
                 CustomerType ct = sess.Query<CustomerType>().FirstOrDefault(x => x.Id == "Umum");
-                Company cp = sess.Query<Company>().FirstOrDefault(x => x.Id == "0001");
+                Client cp = sess.Query<Client>().FirstOrDefault(x => x.Id == "0001");
 
                 Customer cust = new Customer();
                 cust.Id = "CustUmum1";
-                cust.Company = cp;
+                cust.Client = cp;
                 cust.CustomerType = ct;
                 cust.CreateDate = DateTime.Now;
                 cust.UpdateDate = DateTime.Now;
@@ -135,7 +135,7 @@ namespace L.Pos.Cons.Controller
             using (ISession sess = this.UnitOfWork.CreateSession())
             {
                 CustomerType ct = sess.Query<CustomerType>().FirstOrDefault(x => x.Id == "Umum");
-                Company cp = sess.Query<Company>().FirstOrDefault(x => x.Id == "0001");
+                Client cp = sess.Query<Client>().FirstOrDefault(x => x.Id == "0001");
 
                 Customer cust = sess.Query<Customer>().FirstOrDefault(x => x.Id == "CustUmum1");
 
@@ -169,7 +169,7 @@ namespace L.Pos.Cons.Controller
                     supp1 = new Supplier();
                     supp1.Id = "Amigos";
                     supp1.Description = "Amigos";
-                    supp1.Company = this.UnitOfWork.Session.Query<Company>().FirstOrDefault(x => x.Id == "0001");
+                    supp1.Client = this.UnitOfWork.Session.Query<Client>().FirstOrDefault(x => x.Id == "0001");
                     using (ITransaction trx = sess.BeginTransaction())
                     {
                         sess.Save(supp1);
@@ -185,7 +185,7 @@ namespace L.Pos.Cons.Controller
                     supp2 = new Supplier();
                     supp2.Id = "Summo";
                     supp2.Description = "Summo";
-                    supp2.Company = this.UnitOfWork.Session.Query<Company>().FirstOrDefault(x => x.Id == "0001");
+                    supp2.Client = this.UnitOfWork.Session.Query<Client>().FirstOrDefault(x => x.Id == "0001");
                     using (ITransaction trx = sess.BeginTransaction())
                     {
                         sess.Save(supp2);
@@ -242,8 +242,8 @@ namespace L.Pos.Cons.Controller
                         Product1.Shortname = "TESPROD01";
                         Product1.CreateDate = DateTime.Now;
                         Product1.UpdateDate = DateTime.Now;
-                        Product1.Company = sess.Load<Company>("0001");
-                        Product1.Supplier = sess.Load<Supplier>(new Supplier { Id = "Summo", Company = Product1.Company });
+                        Product1.Client = sess.Load<Client>("0001");
+                        Product1.Supplier = sess.Load<Supplier>(new Supplier { Id = "Summo", Client = Product1.Client });
                         //Product1.Supplier = sess.Query<Supplier>().FirstOrDefault(x => x.Id == "0001" && (x.Company != null && x.Company.Id == "0001"));
                         sess.Save(Product1);
                     }

@@ -14,14 +14,14 @@ namespace L.Pos.DataAccess.Map
         {
             this.CompositeId()
                 .KeyProperty(x => x.Id)
-                .KeyReference(x => x.Company, "CompanyId");
+                .KeyReference(x => x.Client, "ClientId");
 
             this.Map(x => x.Description);
             this.Map(x => x.Shortname);
 
             this.References(x => x.CustomerType, "CustomerTypeId").Nullable().Cascade.None();
 
-            this.HasMany(x => x.Addresses).KeyColumns.Add("CustomerId", "CompanyId").Inverse().Cascade.AllDeleteOrphan();
+            this.HasMany(x => x.Addresses).KeyColumns.Add("CustomerId", "ClientId").Inverse().Cascade.AllDeleteOrphan();
 
             this.Map(x => x.CreateBy);
             this.Map(x => x.CreateDate).Nullable();

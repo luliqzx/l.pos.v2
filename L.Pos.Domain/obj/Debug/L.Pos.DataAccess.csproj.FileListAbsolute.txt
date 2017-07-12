@@ -6,3 +6,10 @@ D:\L\RISET\2017\L.PosV2\L.Pos.Domain\bin\Debug\L.Pos.Model.pdb
 D:\L\RISET\2017\L.PosV2\L.Pos.Domain\obj\Debug\L.Pos.DataAccess.csprojResolveAssemblyReference.cache
 D:\L\RISET\2017\L.PosV2\L.Pos.Domain\obj\Debug\L.Pos.DataAccess.dll
 D:\L\RISET\2017\L.PosV2\L.Pos.Domain\obj\Debug\L.Pos.DataAccess.pdb
+D:\L\RISET\2017\L.PosV2\L.Pos.Domain\bin\Debug\FluentNHibernate.dll
+D:\L\RISET\2017\L.PosV2\L.Pos.Domain\bin\Debug\Iesi.Collections.dll
+D:\L\RISET\2017\L.PosV2\L.Pos.Domain\bin\Debug\NHibernate.dll
+D:\L\RISET\2017\L.PosV2\L.Pos.Domain\bin\Debug\FluentNHibernate.pdb
+D:\L\RISET\2017\L.PosV2\L.Pos.Domain\bin\Debug\FluentNHibernate.xml
+D:\L\RISET\2017\L.PosV2\L.Pos.Domain\bin\Debug\Iesi.Collections.xml
+D:\L\RISET\2017\L.PosV2\L.Pos.Domain\bin\Debug\NHibernate.xml

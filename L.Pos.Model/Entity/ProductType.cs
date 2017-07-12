@@ -9,5 +9,6 @@ namespace L.Pos.Model.Entity
     public class ProductType : BaseT<string>
     {
         public virtual string Description { get; set; }
+        public virtual Client Client { get; set; }
     }
 }

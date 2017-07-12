@@ -12,7 +12,7 @@ namespace L.Pos.DataAccess.Map
     {
         public ProductTypeMap()
         {
-            this.Id(x => x.Id).GeneratedBy.Assigned();
+            this.CompositeId().KeyProperty(x => x.Id).KeyReference(x => x.Client, "ClientId");
             this.Map(x => x.Description);
         }
     }

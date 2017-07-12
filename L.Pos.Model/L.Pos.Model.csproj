@@ -43,7 +43,7 @@
     <Compile Include="Entity\Address.cs" />
     <Compile Include="Entity\BaseEntity.cs" />
     <Compile Include="Entity\BaseT.cs" />
-    <Compile Include="Entity\Company.cs" />
+    <Compile Include="Entity\Client.cs" />
     <Compile Include="Entity\Customer.cs" />
     <Compile Include="Entity\CustomerType.cs" />
     <Compile Include="Entity\Employee.cs" />

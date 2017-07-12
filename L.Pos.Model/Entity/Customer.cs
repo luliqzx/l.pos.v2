@@ -9,7 +9,7 @@ namespace L.Pos.Model.Entity
     {
         public virtual string Description { get; set; }
         public virtual string Shortname { get; set; }
-        public virtual Company Company { get; set; }
+        public virtual Client Client { get; set; }
         public virtual CustomerType CustomerType { get; set; }
         public virtual IList<Address> Addresses { get; set; }
 
@@ -18,7 +18,7 @@ namespace L.Pos.Model.Entity
             if (obj != null)
             {
                 Customer ent = obj as Customer;
-                if (Id == ent.Id && Company == ent.Company)
+                if (Id == ent.Id && Client == ent.Client)
                 {
                     return true;
                 }
@@ -29,7 +29,7 @@ namespace L.Pos.Model.Entity
         public override int GetHashCode()
         {
             int i = 0;
-            i = (Id + "|" + Company.Id).GetHashCode();
+            i = (Id + "|" + Client.Id).GetHashCode();
             return i;
         }
     }

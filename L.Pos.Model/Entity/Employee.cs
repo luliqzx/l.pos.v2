@@ -14,8 +14,8 @@ namespace L.Pos.Model.Entity
         public virtual string Nickname { get; set; }
         public virtual string Username { get; set; }
         public virtual string Password { get; set; }
-        public virtual Company Company { get; set; }
-        public virtual string CompanyId { get; set; }
-        public virtual IList<Company> Companies { get; set; }
+        public virtual Client Company { get; set; }
+        public virtual string ClientId { get; set; }
+        public virtual IList<Client> Companies { get; set; }
     }
 }

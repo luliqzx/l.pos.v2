@@ -14,9 +14,9 @@ namespace L.Pos.DataAccess.Map
         {
             this.CompositeId()
                 .KeyProperty(x => x.Id, "Id")
-                .KeyReference(x => x.Customer, "CustomerId", "CompanyId");
+                .KeyReference(x => x.Customer, "CustomerId", "ClientId");
 
-            //this.References(x => x.Customer).Columns("CustomerId", "CompanyId");
+            //this.References(x => x.Customer).Columns("CustomerId", "ClientId");
 
             this.Map(x => x.Person);
             this.Map(x => x.AddressLine);

@@ -32,7 +32,7 @@ namespace L.Pos.Model.Entity
         public override int GetHashCode()
         {
             int i = 0;
-            i = (Id + "|" + Customer.Id + "|" + Customer.Company.Id).GetHashCode();
+            i = (Id + "|" + Customer.Id + "|" + Customer.Client.Id).GetHashCode();
             return i;
         }
     }

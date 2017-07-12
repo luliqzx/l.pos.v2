@@ -9,3 +9,11 @@ D:\L\RISET\2017\L.PosV2\L.Pos.Cons\bin\Debug\L.Pos.Model.pdb
 D:\L\RISET\2017\L.PosV2\L.Pos.Cons\obj\Debug\L.Pos.Cons.csprojResolveAssemblyReference.cache
 D:\L\RISET\2017\L.PosV2\L.Pos.Cons\obj\Debug\L.Pos.Cons.exe
 D:\L\RISET\2017\L.PosV2\L.Pos.Cons\obj\Debug\L.Pos.Cons.pdb
+D:\L\RISET\2017\L.PosV2\L.Pos.Cons\bin\Debug\Iesi.Collections.dll
+D:\L\RISET\2017\L.PosV2\L.Pos.Cons\bin\Debug\NHibernate.dll
+D:\L\RISET\2017\L.PosV2\L.Pos.Cons\bin\Debug\SimpleInjector.dll
+D:\L\RISET\2017\L.PosV2\L.Pos.Cons\bin\Debug\Iesi.Collections.xml
+D:\L\RISET\2017\L.PosV2\L.Pos.Cons\bin\Debug\NHibernate.xml
+D:\L\RISET\2017\L.PosV2\L.Pos.Cons\bin\Debug\SimpleInjector.xml
+D:\L\RISET\2017\L.PosV2\L.Pos.Cons\bin\Debug\FluentNHibernate.pdb
+D:\L\RISET\2017\L.PosV2\L.Pos.Cons\bin\Debug\FluentNHibernate.xml

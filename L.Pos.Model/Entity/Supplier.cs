@@ -9,14 +9,14 @@ namespace L.Pos.Model.Entity
     public class Supplier : BaseEntity<string>
     {
         public virtual string Description { get; set; }
-        public virtual Company Company { get; set; }
+        public virtual Client Client { get; set; }
 
         public override bool Equals(object obj)
         {
             if (obj != null)
             {
                 Supplier ent = obj as Supplier;
-                if (Id == ent.Id && Company == ent.Company)
+                if (Id == ent.Id && Client == ent.Client)
                 {
                     return true;
                 }
@@ -27,7 +27,7 @@ namespace L.Pos.Model.Entity
         public override int GetHashCode()
         {
             int i = 0;
-            i = (Id + "|" + Company.Id).GetHashCode();
+            i = (Id + "|" + Client.Id).GetHashCode();
             return i;
         }
     }
