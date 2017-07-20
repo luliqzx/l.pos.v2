@@ -12,14 +12,15 @@ namespace L.Pos.DataAccess.Map
     {
         public ProductMap()
         {
-            this.CompositeId()
-                .KeyProperty(x => x.Id)
-                .KeyReference(x => x.Client, "Client");
+            //this.CompositeId()
+            //    .KeyProperty(x => x.Id)
+            //    .KeyReference(x => x.Client, "Client");
+            this.Id(x => x.Id).GeneratedBy.Assigned();
             this.Map(x => x.Description);
             this.Map(x => x.Shortname);
 
-            this.References(x => x.Supplier).Columns("SupplierId", "SuppClient");//.Cascade.None();
-            this.References(x => x.ProductType).Columns("ProductTypeId", "PTClient");//.Cascade.None();
+            this.References(x => x.Supplier).Columns("SupplierId");//.Cascade.None();
+            this.References(x => x.ProductType).Columns("ProductTypeId");//.Cascade.None();
             this.References(x => x.BaseUnit, "BaseUnit");//.Cascade.None();
             this.References(x => x.SalesUnit, "SalesUnit");//.Cascade.None();
         }

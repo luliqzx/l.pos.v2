@@ -36,17 +36,17 @@ namespace L.Pos.Cons.Controller
             Client client = UnitOfWork.CreateSession().Load<Client>("0001");
 
             IList<ProductType> lstPT = new List<ProductType>();
-            lstPT.Add(new ProductType { Id = "Makanan", Description = "Makanan", Client = client });
-            lstPT.Add(new ProductType { Id = "Minuman", Description = "Minuman", Client = client });
-            lstPT.Add(new ProductType { Id = "Pakaian", Description = "Pakaian", Client = client });
-            lstPT.Add(new ProductType { Id = "Sepatu", Description = "Sepatu", Client = client });
-            lstPT.Add(new ProductType { Id = "Tas", Description = "Tas", Client = client });
+            lstPT.Add(new ProductType { Id = "Makanan", Description = "Makanan" });
+            lstPT.Add(new ProductType { Id = "Minuman", Description = "Minuman" });
+            lstPT.Add(new ProductType { Id = "Pakaian", Description = "Pakaian" });
+            lstPT.Add(new ProductType { Id = "Sepatu", Description = "Sepatu" });
+            lstPT.Add(new ProductType { Id = "Tas", Description = "Tas" });
 
             using (ITransaction trx = this.UnitOfWork.Session.BeginTransaction())
             {
                 for (int i = 0; i < lstPT.Count; i++)
                 {
-                    ProductType pt = this.UnitOfWork.Session.Query<ProductType>().FirstOrDefault(x => x.Id == lstPT[i].Id && x.Client == client);
+                    ProductType pt = this.UnitOfWork.Session.Query<ProductType>().FirstOrDefault(x => x.Id == lstPT[i].Id );
                     if (pt == null)
                     {
                         this.UnitOfWork.Session.Save(lstPT[i]);
@@ -62,8 +62,8 @@ namespace L.Pos.Cons.Controller
             Client client = this.UnitOfWork.CreateSession().Load<Client>("0001");
 
             IList<CustomerType> lstCT = new List<CustomerType>();
-            lstCT.Add(new CustomerType { Id = "Umum", Description = "Umum", Client = client });
-            lstCT.Add(new CustomerType { Id = "Toko", Description = "Toko", Client = client });
+            lstCT.Add(new CustomerType { Id = "Umum", Description = "Umum"});
+            lstCT.Add(new CustomerType { Id = "Toko", Description = "Toko"});
 
             using (ITransaction trx = this.UnitOfWork.Session.BeginTransaction())
             {
@@ -118,7 +118,7 @@ namespace L.Pos.Cons.Controller
 
                 Customer cust = new Customer();
                 cust.Id = "CustUmum1";
-                cust.Client = cp;
+                //cust.Client = cp;
                 cust.CustomerType = ct;
                 cust.CreateDate = DateTime.Now;
                 cust.UpdateDate = DateTime.Now;
@@ -173,7 +173,7 @@ namespace L.Pos.Cons.Controller
                     supp1 = new Supplier();
                     supp1.Id = "Amigos";
                     supp1.Description = "Amigos";
-                    supp1.Client = this.UnitOfWork.Session.Query<Client>().FirstOrDefault(x => x.Id == "0001");
+                    //supp1.Client = this.UnitOfWork.Session.Query<Client>().FirstOrDefault(x => x.Id == "0001");
                     using (ITransaction trx = sess.BeginTransaction())
                     {
                         sess.Save(supp1);
@@ -189,7 +189,7 @@ namespace L.Pos.Cons.Controller
                     supp2 = new Supplier();
                     supp2.Id = "Summo";
                     supp2.Description = "Summo";
-                    supp2.Client = this.UnitOfWork.Session.Query<Client>().FirstOrDefault(x => x.Id == "0001");
+                    //supp2.Client = this.UnitOfWork.Session.Query<Client>().FirstOrDefault(x => x.Id == "0001");
                     using (ITransaction trx = sess.BeginTransaction())
                     {
                         sess.Save(supp2);
@@ -246,8 +246,8 @@ namespace L.Pos.Cons.Controller
                         Product1.Shortname = "TESPROD01";
                         Product1.CreateDate = DateTime.Now;
                         Product1.UpdateDate = DateTime.Now;
-                        Product1.Client = sess.Load<Client>("0001");
-                        Product1.Supplier = sess.Load<Supplier>(new Supplier { Id = "Summo", Client = Product1.Client });
+                        //Product1.Client = sess.Load<Client>("0001");
+                        //Product1.Supplier = sess.Load<Supplier>(new Supplier { Id = "Summo", Client = Product1.Client });
                         //Product1.Supplier = sess.Query<Supplier>().FirstOrDefault(x => x.Id == "0001" && (x.Company != null && x.Company.Id == "0001"));
                         sess.Save(Product1);
                     }

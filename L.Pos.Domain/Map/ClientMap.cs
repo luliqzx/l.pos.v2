@@ -8,21 +8,14 @@ using System.Threading.Tasks;
 
 namespace L.Pos.DataAccess.Map
 {
-    public class AddressMap : ClassMap<Address>
+    public class ClientMap : ClassMap<Client>
     {
-        public AddressMap()
+        public ClientMap()
         {
-            this.CompositeId()
-                .KeyProperty(x => x.Id, "Id")
-                .KeyReference(x => x.Customer, "CustomerId");
+            this.Id(x => x.Id).GeneratedBy.Assigned();
+            this.Map(x => x.Description);
 
-            //this.References(x => x.Customer).Columns("CustomerId", "ClientId");
-
-            this.Map(x => x.Person);
-            this.Map(x => x.AddressLine);
-            this.Map(x => x.City);
-            this.Map(x => x.Province);
-            this.Map(x => x.Country);
+            this.References(x => x.RootClient, "RootClient").Nullable();
 
             this.Map(x => x.CreateBy);
             this.Map(x => x.CreateDate).Nullable();
