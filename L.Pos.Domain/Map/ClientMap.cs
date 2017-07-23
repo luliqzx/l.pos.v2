@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 
 namespace L.Pos.DataAccess.Map
 {
-    public class CompanyMap : ClassMap<Company>
+    public class ClientMap : ClassMap<Client>
     {
-        public CompanyMap()
+        public ClientMap()
         {
             this.Id(x => x.Id).GeneratedBy.Assigned();
             this.Map(x => x.Description);
 
+            this.References(x => x.RootClient, "RootClient").Nullable();
 
             this.Map(x => x.CreateBy);
             this.Map(x => x.CreateDate).Nullable();

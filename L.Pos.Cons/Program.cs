@@ -21,9 +21,9 @@ namespace L.Pos.Cons
             Bootstrap.Start(container);
 
             MasterController = container.GetInstance<IMasterController>();
+            MasterController.collectclient();
             MasterController.collectproducttype();
             MasterController.collectcustomertype();
-            MasterController.collectcompany();
             MasterController.buildcustomer();
             MasterController.collectsupplier();
             MasterController.collectuom();

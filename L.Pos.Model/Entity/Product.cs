@@ -10,13 +10,14 @@ namespace L.Pos.Model.Entity
     {
         public virtual string Description { get; set; }
         public virtual string Shortname { get; set; }
-        public virtual Company Company { get; set; }
+        //public virtual Client Client { get; set; }
         public virtual Supplier Supplier { get; set; }
         public virtual ProductType ProductType { get; set; }
 
         public virtual UoM BaseUnit { get; set; }
 
         public virtual UoM SalesUnit { get; set; }
+<<<<<<< HEAD
 
         public virtual decimal PriceUnit { get; set; }
 
@@ -40,5 +41,7 @@ namespace L.Pos.Model.Entity
             i = (Id + "|" + Company.Id).GetHashCode();
             return i;
         }
+=======
+>>>>>>> a5a64c71d289a609bff77d33387b288a84fe7f63
     }
 }

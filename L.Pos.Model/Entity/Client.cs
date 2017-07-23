@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace L.Pos.Model.Entity
 {
-    public class Company : BaseEntity<string>
+    public class Client : BaseEntity<string>
     {
         public virtual string Description { get; set; }
+        public virtual Client RootClient { get; set; }
     }
 }

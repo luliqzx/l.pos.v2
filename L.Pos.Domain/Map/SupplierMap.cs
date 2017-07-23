@@ -12,9 +12,10 @@ namespace L.Pos.DataAccess.Map
     {
       public SupplierMap()
       {
-          this.CompositeId()
-              .KeyProperty(x => x.Id)
-              .KeyReference(x => x.Company, "CompanyId");
+          //this.CompositeId()
+          //    .KeyProperty(x => x.Id)
+          //    .KeyReference(x => x.Client, "Client");
+          this.Id(x => x.Id).GeneratedBy.Assigned();
           this.Map(x => x.Description);
       }
     }

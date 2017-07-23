@@ -12,16 +12,18 @@ namespace L.Pos.DataAccess.Map
     {
         public CustomerMap()
         {
-            this.CompositeId()
-                .KeyProperty(x => x.Id)
-                .KeyReference(x => x.Company, "CompanyId");
+            //this.CompositeId()
+            //    .KeyProperty(x => x.Id)
+            //    .KeyReference(x => x.Client, "Client");
+
+            this.Id(x => x.Id).GeneratedBy.Assigned();
 
             this.Map(x => x.Description);
             this.Map(x => x.Shortname);
 
-            this.References(x => x.CustomerType, "CustomerTypeId").Nullable().Cascade.None();
+            this.References(x => x.CustomerType).Columns("CustomerTypeId").Nullable().Cascade.None();
 
-            this.HasMany(x => x.Addresses).KeyColumns.Add("CustomerId", "CompanyId").Inverse().Cascade.AllDeleteOrphan();
+            this.HasMany(x => x.Addresses).KeyColumns.Add("CustomerId").Inverse().Cascade.AllDeleteOrphan();
 
             this.Map(x => x.CreateBy);
             this.Map(x => x.CreateDate).Nullable();

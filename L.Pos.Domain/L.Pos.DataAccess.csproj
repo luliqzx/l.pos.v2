@@ -60,7 +60,7 @@
     <Compile Include="Map\AddressMap.cs" />
     <Compile Include="Map\CustomerMap.cs" />
     <Compile Include="Map\CustomerTypeMap.cs" />
-    <Compile Include="Map\CompanyMap.cs" />
+    <Compile Include="Map\ClientMap.cs" />
     <Compile Include="Map\ProductTypeMap.cs" />
     <Compile Include="Map\ProductMap.cs" />
     <Compile Include="Map\SupplierMap.cs" />
