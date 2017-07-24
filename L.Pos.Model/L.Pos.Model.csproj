@@ -44,10 +44,14 @@
     <Compile Include="Entity\BaseEntity.cs" />
     <Compile Include="Entity\BaseT.cs" />
     <Compile Include="Entity\Client.cs" />
+    <Compile Include="Entity\Company.cs" />
+    <Compile Include="Entity\Country.cs" />
     <Compile Include="Entity\Customer.cs" />
     <Compile Include="Entity\CustomerType.cs" />
     <Compile Include="Entity\Employee.cs" />
     <Compile Include="Entity\IAuditable.cs" />
+    <Compile Include="Entity\Language.cs" />
+    <Compile Include="Entity\LanguageResource.cs" />
     <Compile Include="Entity\Plant.cs" />
     <Compile Include="Entity\Product.cs" />
     <Compile Include="Entity\ProductType.cs" />

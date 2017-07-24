@@ -8,13 +8,13 @@ namespace L.Pos.Model.Entity
 {
     public class Address : BaseEntity<string>
     {
-        //public virtual string AddressName { get; set; }
         public virtual string Person { get; set; }
         public virtual Customer Customer { get; set; }
         public virtual string AddressLine { get; set; }
         public virtual string City { get; set; }
         public virtual string Province { get; set; }
         public virtual string Country { get; set; }
+        public virtual Plant Plant { get; set; }
 
         public override bool Equals(object obj)
         {

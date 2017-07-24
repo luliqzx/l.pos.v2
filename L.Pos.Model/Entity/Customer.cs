@@ -10,7 +10,6 @@ namespace L.Pos.Model.Entity
         public virtual string Description { get; set; }
         public virtual string Shortname { get; set; }
         public virtual CustomerType CustomerType { get; set; }
-        public virtual Plant BasePlant { get; set; }
         public virtual IList<Address> Addresses { get; set; }
     }
 }

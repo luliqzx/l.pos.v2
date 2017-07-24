@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace L.Pos.Model.Entity
 {
-    public class Plant : BaseEntity<string>
+    public class Language : BaseEntity<string>
     {
         public virtual string Description { get; set; }
-        public virtual Company Company { get; set; }
+        public virtual Country Country { get; set; }
     }
 }

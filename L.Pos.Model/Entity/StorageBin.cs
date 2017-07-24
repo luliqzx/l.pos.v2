@@ -10,7 +10,7 @@ namespace L.Pos.Model.Entity
     {
         public virtual string Description { get; set; }
         public virtual StorageLocation StorageLocation { get; set; }
-        public virtual Plant Plant { get; set; }
+        //public virtual Plant Plant { get; set; }
         public virtual Product Product { get; set; }
     }
 }
