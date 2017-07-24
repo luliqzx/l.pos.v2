@@ -17,31 +17,7 @@ namespace L.Pos.Model.Entity
         public virtual UoM BaseUnit { get; set; }
 
         public virtual UoM SalesUnit { get; set; }
-<<<<<<< HEAD
 
         public virtual decimal PriceUnit { get; set; }
-
-
-        public override bool Equals(object obj)
-        {
-            if (obj != null)
-            {
-                Product ent = obj as Product;
-                if (Id == ent.Id && Company == ent.Company)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public override int GetHashCode()
-        {
-            int i = 0;
-            i = (Id + "|" + Company.Id).GetHashCode();
-            return i;
-        }
-=======
->>>>>>> a5a64c71d289a609bff77d33387b288a84fe7f63
     }
 }

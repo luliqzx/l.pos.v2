@@ -1,10 +1,9 @@
-D:\L\RISET\2017\L.PosV2\L.Pos.Model\bin\Debug\L.Pos.Model.dll
-D:\L\RISET\2017\L.PosV2\L.Pos.Model\bin\Debug\L.Pos.Model.pdb
-D:\L\RISET\2017\L.PosV2\L.Pos.Model\obj\Debug\L.Pos.Model.dll
-D:\L\RISET\2017\L.PosV2\L.Pos.Model\obj\Debug\L.Pos.Model.pdb
-D:\L\RISET\2017\L.PosV2\L.Pos.Model\obj\Debug\L.Pos.Model.csprojResolveAssemblyReference.cache
 D:\LUCKY\PROJECT\2017\l.pos\L.Pos.Model\bin\Debug\L.Pos.Model.dll
 D:\LUCKY\PROJECT\2017\l.pos\L.Pos.Model\bin\Debug\L.Pos.Model.pdb
 D:\LUCKY\PROJECT\2017\l.pos\L.Pos.Model\obj\Debug\L.Pos.Model.csprojResolveAssemblyReference.cache
 D:\LUCKY\PROJECT\2017\l.pos\L.Pos.Model\obj\Debug\L.Pos.Model.dll
 D:\LUCKY\PROJECT\2017\l.pos\L.Pos.Model\obj\Debug\L.Pos.Model.pdb
+D:\L\RISET\2017\L.PosV2\L.Pos.Model\bin\Debug\L.Pos.Model.dll
+D:\L\RISET\2017\L.PosV2\L.Pos.Model\bin\Debug\L.Pos.Model.pdb
+D:\L\RISET\2017\L.PosV2\L.Pos.Model\obj\Debug\L.Pos.Model.dll
+D:\L\RISET\2017\L.PosV2\L.Pos.Model\obj\Debug\L.Pos.Model.pdb
