@@ -1,0 +1,41 @@
+# commit change
+'wq' is not recognized as an internal or external command,
+operable program or batch file.
+operable program or batch file.
+# On branch 20170712
+# Your branch is ahead of 'origin/20170712' by 2 commits.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   L.Pos.Cons/bin/Debug/L.Pos.Cons.exe
+#	modified:   L.Pos.Cons/bin/Debug/L.Pos.Cons.pdb
+#	modified:   L.Pos.Cons/bin/Debug/L.Pos.DataAccess.dll
+#	modified:   L.Pos.Cons/bin/Debug/L.Pos.DataAccess.pdb
+#	modified:   L.Pos.Cons/bin/Debug/L.Pos.Model.dll
+#	modified:   L.Pos.Cons/bin/Debug/L.Pos.Model.pdb
+#	modified:   L.Pos.Cons/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	modified:   L.Pos.Cons/obj/Debug/L.Pos.Cons.csprojResolveAssemblyReference.cache
+#	modified:   L.Pos.Cons/obj/Debug/L.Pos.Cons.exe
+#	modified:   L.Pos.Cons/obj/Debug/L.Pos.Cons.pdb
+#	new file:   L.Pos.Cons/obj/Debug/build.force
+#	modified:   L.Pos.Domain/bin/Debug/L.Pos.DataAccess.dll
+#	modified:   L.Pos.Domain/bin/Debug/L.Pos.DataAccess.pdb
+#	modified:   L.Pos.Domain/bin/Debug/L.Pos.Model.dll
+#	modified:   L.Pos.Domain/bin/Debug/L.Pos.Model.pdb
+#	modified:   L.Pos.Domain/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	modified:   L.Pos.Domain/obj/Debug/L.Pos.DataAccess.csprojResolveAssemblyReference.cache
+#	modified:   L.Pos.Domain/obj/Debug/L.Pos.DataAccess.dll
+#	modified:   L.Pos.Domain/obj/Debug/L.Pos.DataAccess.pdb
+#	new file:   L.Pos.Domain/obj/Debug/build.force
+#	modified:   L.Pos.Model/Entity/Customer.cs
+#	modified:   L.Pos.Model/Entity/Product.cs
+#	modified:   L.Pos.Model/Entity/Supplier.cs
+#	modified:   L.Pos.Model/bin/Debug/L.Pos.Model.dll
+#	modified:   L.Pos.Model/bin/Debug/L.Pos.Model.pdb
+#	modified:   L.Pos.Model/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+#	modified:   L.Pos.Model/obj/Debug/L.Pos.Model.csproj.FileListAbsolute.txt
+#	deleted:    L.Pos.Model/obj/Debug/L.Pos.Model.csprojResolveAssemblyReference.cache
+#	modified:   L.Pos.Model/obj/Debug/L.Pos.Model.dll
+#	modified:   L.Pos.Model/obj/Debug/L.Pos.Model.pdb
+#	modified:   L.PosV2.v12.suo
+#
