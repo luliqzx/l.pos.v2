@@ -46,7 +46,7 @@ namespace L.Pos.Cons.Controller
             {
                 for (int i = 0; i < lstPT.Count; i++)
                 {
-                    ProductType pt = this.UnitOfWork.Session.Query<ProductType>().FirstOrDefault(x => x.Id == lstPT[i].Id );
+                    ProductType pt = this.UnitOfWork.Session.Query<ProductType>().FirstOrDefault(x => x.Id == lstPT[i].Id);
                     if (pt == null)
                     {
                         this.UnitOfWork.Session.Save(lstPT[i]);
@@ -62,8 +62,8 @@ namespace L.Pos.Cons.Controller
             Client client = this.UnitOfWork.CreateSession().Load<Client>("0001");
 
             IList<CustomerType> lstCT = new List<CustomerType>();
-            lstCT.Add(new CustomerType { Id = "Umum", Description = "Umum"});
-            lstCT.Add(new CustomerType { Id = "Toko", Description = "Toko"});
+            lstCT.Add(new CustomerType { Id = "Umum", Description = "Umum" });
+            lstCT.Add(new CustomerType { Id = "Toko", Description = "Toko" });
 
             using (ITransaction trx = this.UnitOfWork.Session.BeginTransaction())
             {
@@ -241,8 +241,8 @@ namespace L.Pos.Cons.Controller
                         Product1 = new Product();
                         Product1.Id = "TESPROD01";
                         Product1.Description = "TESPROD01";
-                        Product1.BaseUnit = sess.Load<UoM>("PCS");
-                        Product1.SalesUnit = sess.Load<UoM>("PCS");
+                        //Product1.BaseUnit = sess.Load<UoM>("PCS");
+                        //Product1.SalesUnit = sess.Load<UoM>("PCS");
                         Product1.Shortname = "TESPROD01";
                         Product1.CreateDate = DateTime.Now;
                         Product1.UpdateDate = DateTime.Now;

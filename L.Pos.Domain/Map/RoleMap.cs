@@ -13,8 +13,8 @@ namespace L.Pos.DataAccess.Map
         public RoleMap()
         {
             this.Id(x => x.Id).Column("RoleId").GeneratedBy.Assigned();
-            this.References(x => x.MainRole).Column("MainRoleId").Cascade.SaveUpdate();
-            this.HasManyToMany(x => x.Actors).Table("ActorRole").ParentKeyColumn("RoleId").ChildKeyColumn("ActorId");
+            this.References(x => x.RootRole).Column("RootRoleId").Cascade.SaveUpdate();
+            this.HasManyToMany(x => x.Employees).Table("EmployeeRole").ParentKeyColumn("RoleId").ChildKeyColumn("EmployeeId");
             this.Map(x => x.Description);
 
             this.HasMany(x => x.RoleMenus).KeyColumn("RoleId").Cascade.SaveUpdate().Inverse();

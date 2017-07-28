@@ -14,7 +14,7 @@ namespace L.Pos.DataAccess.Map
         {
             this.Id(x => x.Id).Column("MenuId").GeneratedBy.Assigned();
             this.Map(x => x.Description);
-            this.HasMany(x => x.RoleMenus).KeyColumn("MenuId").Inverse();
+            this.HasMany(x => x.RoleMenus).AsBag().KeyColumn("MenuId").Inverse();
 
             this.Map(x => x.Active);
         }

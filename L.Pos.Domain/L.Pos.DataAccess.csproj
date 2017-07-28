@@ -61,9 +61,14 @@
     <Compile Include="Map\CustomerMap.cs" />
     <Compile Include="Map\CustomerTypeMap.cs" />
     <Compile Include="Map\ClientMap.cs" />
+    <Compile Include="Map\MenuMap.cs" />
+    <Compile Include="Map\PrivilegeMap.cs" />
     <Compile Include="Map\ProductTypeMap.cs" />
     <Compile Include="Map\ProductMap.cs" />
+    <Compile Include="Map\RoleMap.cs" />
+    <Compile Include="Map\RoleMenuMap.cs" />
     <Compile Include="Map\SupplierMap.cs" />
+    <Compile Include="Map\EmployeeMap.cs" />
     <Compile Include="Map\UoMMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ProductTypeRepo.cs" />

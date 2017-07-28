@@ -52,9 +52,13 @@
     <Compile Include="Entity\IAuditable.cs" />
     <Compile Include="Entity\Language.cs" />
     <Compile Include="Entity\LanguageResource.cs" />
+    <Compile Include="Entity\Menu.cs" />
     <Compile Include="Entity\Plant.cs" />
+    <Compile Include="Entity\Privilege.cs" />
     <Compile Include="Entity\Product.cs" />
     <Compile Include="Entity\ProductType.cs" />
+    <Compile Include="Entity\Role.cs" />
+    <Compile Include="Entity\RoleMenu.cs" />
     <Compile Include="Entity\Shipper.cs" />
     <Compile Include="Entity\StorageBin.cs" />
     <Compile Include="Entity\StorageLocation.cs" />

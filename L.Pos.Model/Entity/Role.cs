@@ -9,33 +9,33 @@ namespace L.Pos.Model.Entity
     public class Role : BaseEntity<string>
     {
         public virtual string Description { get; set; }
-        public virtual ICollection<Actor> Actors { get; set; }
-        public virtual Role MainRole { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
+        public virtual Role RootRole { get; set; }
         public virtual ICollection<RoleMenu> RoleMenus { get; set; }
 
-        public virtual void AddActor(Actor newActor)
+        public virtual void AddEmployee(Employee newEmployee)
         {
-            if (Actors == null)
+            if (Employees == null)
             {
-                Actors = new List<Actor>();
+                Employees = new List<Employee>();
             }
 
-            if (Actors.FirstOrDefault(x => x.Id == newActor.Id) == null)
+            if (Employees.FirstOrDefault(x => x.Id == newEmployee.Id) == null)
             {
-                Actors.Add(newActor);
+                Employees.Add(newEmployee);
             }
         }
 
-        public virtual void RemoveActor(Actor Actor)
+        public virtual void RemoveEmployee(Employee Employee)
         {
-            if (Actors == null)
+            if (Employees == null)
             {
-                Actors = new List<Actor>();
+                Employees = new List<Employee>();
             }
 
-            if (Actors.FirstOrDefault(x => x.Id == Actor.Id) != null)
+            if (Employees.FirstOrDefault(x => x.Id == Employee.Id) != null)
             {
-                Actors.Remove(Actor);
+                Employees.Remove(Employee);
             }
         }
 

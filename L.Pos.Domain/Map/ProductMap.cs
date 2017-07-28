@@ -21,8 +21,8 @@ namespace L.Pos.DataAccess.Map
 
             this.References(x => x.Supplier).Columns("SupplierId");//.Cascade.None();
             this.References(x => x.ProductType).Columns("ProductTypeId");//.Cascade.None();
-            this.References(x => x.BaseUnit, "BaseUnit");//.Cascade.None();
-            this.References(x => x.SalesUnit, "SalesUnit");//.Cascade.None();
+            //this.References(x => x.BaseUnit, "BaseUnit");//.Cascade.None();
+            //this.References(x => x.SalesUnit, "SalesUnit");//.Cascade.None();
         }
     }
 }

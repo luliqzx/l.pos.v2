@@ -11,8 +11,9 @@ namespace L.Pos.Model.Entity
         public virtual string Firstname { get; set; }
         public virtual string MiddleName { get; set; }
         public virtual string LastName { get; set; }
-        public virtual string Nickname { get; set; }
         public virtual string Username { get; set; }
         public virtual string Password { get; set; }
+
+        public virtual ICollection<Role> Roles { get; set; }
     }
 }

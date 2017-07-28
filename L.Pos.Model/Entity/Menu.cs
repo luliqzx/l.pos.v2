@@ -10,9 +10,10 @@ namespace L.Pos.Model.Entity
     {
         public virtual string Description { get; set; }
         public virtual int Position { get; set; }
-        public virtual Menu MainMenu { get; set; }
+        public virtual Menu RootMenu { get; set; }
         public virtual string Link { get; set; }
         public virtual bool Active { get; set; }
+        public virtual string LanguageKey { get; set; }
 
         public virtual ICollection<RoleMenu> RoleMenus { get; set; }
 
